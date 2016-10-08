@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/preview.css">
+    <script type="text/javascript" src="./components/angular.min.js"></script>
+  </head>
+  <body ng-controller="appCtrl">
+    <div class="container">
+      <div class="item" ng-repeat="item in imageList" ng-click="preview(item)">
+        <img ng-src="{{ item.url }}" alt="">
+      </div>
+
+      <div img-preview show-preview="vm.showPreview" current-img="vm.currentImg" image-list="imageList"></div>
+
+    </div>
+
+    <script type="text/javascript" src="./js/ctrl.js"></script>
+  </body>
+</html>
